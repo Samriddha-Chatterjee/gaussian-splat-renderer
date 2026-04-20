@@ -26,6 +26,8 @@ Each Gaussian:
 - Carries RGB color information
 
 The final image is formed by accumulating these contributions and normalizing.
+
+
 ![Gaussian Reconstruction](output.jpg)
 
 ---
