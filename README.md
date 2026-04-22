@@ -39,22 +39,22 @@ The step size controls how densely Gaussians are placed across the image.
 
 ---
 
-### Step = 6 (Very Sparse Sampling)
+### Step = 6 (Moderate Sampling)
 ![Step 6](patch_avg_6_step.jpg)
 
 ---
 
-### Step = 4 (Moderate Sampling)
+### Step = 4 (High Sampling)
 ![Step 4](patch_avg_4_step.jpg)
 
 ---
 
-### Step = 2 (Dense Sampling)
+### Step = 2 (Very High Sampling)
 ![Step 2](patch_avg_2_step.jpg)
 
 ---
 
-### Step = 1 (High Detail)
+### Step = 1 (Near Pixel Level Detail)
 ![Step 1](patch_avg_1_step.jpg)
 
 ---
