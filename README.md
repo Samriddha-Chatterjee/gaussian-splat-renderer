@@ -32,7 +32,7 @@ The final image is formed by accumulating these contributions and normalizing.
 
 ##  Effect of Sampling Density (Step Size)
 
-The step size controls how densely Gaussians are placed across the image.
+> Step size defines the spatial sampling frequency of the renderer.
 
 - Larger step → fewer samples → blocky/dotted output  
 - Smaller step → more samples → smoother reconstruction  
@@ -56,6 +56,12 @@ The step size controls how densely Gaussians are placed across the image.
 
 ### Step = 1 (Near Pixel Level Detail)
 ![Step 1](patch_avg_1_step.jpg)
+
+---
+
+###  Tradeoff
+
+Reducing step size improves quality but increases computational cost, as more Gaussians must be rendered.
 
 ---
 
