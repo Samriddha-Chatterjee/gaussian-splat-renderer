@@ -102,9 +102,17 @@ void load_ppm(const char* filename){
 }
 
 void draw_gaussian(float cx, float cy, float sigma, float r,float g,float b){
-    for(int y=0;y<height;y++){
-        for(int x=0;x<width;x++){
-            int idx;
+    
+    int radius=(int)(sigma*3);
+
+    
+    for(int y=(int)(cy-radius);y<=(int)(cy+radius);y++){
+        for(int x=(int)(cx-radius);x<=(int)(cx+radius);x++){
+            
+
+            if(x<0||x>=width||y<0||y>=height)continue;
+
+
             float dx=x-cx;
             float dy=y-cy;
 
@@ -112,9 +120,9 @@ void draw_gaussian(float cx, float cy, float sigma, float r,float g,float b){
 
             float intensity=exp(-dist/(2*sigma*sigma));
 
-            unsigned char val=(unsigned char)(intensity*255);
+            //unsigned char val=(unsigned char)(intensity*255);
 
-            idx=y*width+x;
+            int idx=y*width+x;
 
             buffer_r[idx] +=intensity*r;
             buffer_g[idx] +=intensity*g;
